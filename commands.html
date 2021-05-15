@@ -1,37 +1,79 @@
 <!DOCTYPE html>
-  <html style="background-color: rgb(52, 56, 60); font-family: Open Sans;">
-    <head>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
+<html style="background-color: rgb(52, 56, 60); font-family: Open Sans;">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
           <script data-ad-client="ca-pub-6296314318874238" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <title>Commands - Moderator</title>
-      <style>
-        .code {
-          color: red;
-        }
-  </head>
-  <body>
-    <center>
-      <span>Prefix:</span>
-        <code>server</code>
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+<style>
+.code {
+	color: red;
+}
+</style>
+</head>
+<body>
+<center>
+      <span style="color: white;">Prefix:</span>
+        <code style="color: red; background-color: grey;">server!</code>
         <br>
-        <span>Commands</span>
+        <span style="color: white;">Commands:</span>
         <br>
-        <code>server!banuser <user> <reason></code>
+        <code style="color: red; background-color: grey;">server!banuser @Wumpus rudeness to others</code>
         <br>
-        <code>server!kickuser <user> <reason></code>
+        <code style="color: red; background-color: grey;">server!kickuser @Wumpus spam</code>
         <br>
-        <code>server!dmuser <user> <message></code>
+        <code style="color: red; background-color: grey;">server!dmuser @Wumpus hello!</code>
         <br>
-        <code>server!setupbot</code>
+        <code style="color: red; background-color: grey;">server!setupbot</code>
         <br>
-        <code>server!purge <number></code>
+        <code style="color: red; background-color: grey;">server!purge 6</code>
         <br>
-        <code>server!muteuser <user></code>
+        <code style="color: red; background-color: grey;">server!muteuser @Wumpus</code>
         <br>
-        <code>server!unmuteuser <user></code>
+        <code style="color: red; background-color: grey; ">server!unmuteuser @Wumpus</code>
         <br>
         </center>
-        <script>(function(){id='M0F3ZCdbwHNp-J9MXI1k5TGYo';function l(u){var e=document.createElement('script');e.type='text/javascript';e.src='https://www.adblockanalytics.com/'+u;e.async=0;var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(e,x);}l('ad-blocker.js');l('analyze.js');})();</script>
-  </body>
+  
+</body>
 </html>
