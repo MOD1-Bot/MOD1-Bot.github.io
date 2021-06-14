@@ -104,7 +104,7 @@ body {
                 req.send(code)
                 req.onload = () => {
                     
-                    document.getElementById("display_result").innerText = `<p>${req.responseText}</p>`
+                    document.getElementById("display_result").innerText = `${req.username}`
                 }
 
 			}
