@@ -96,25 +96,19 @@ body {
       <script>
         
 		window.onload = () => {
-		const fragment = new URLSearchParams(window.location.hash.slice(1));
-		const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+			const code = location.href.substring(location.href.indexOf("code")+5, location.href.length)
 
-		if (!accessToken) {
-			return document.getElementById('login').style.display = 'block';
+			if (location.href.indexOf("code") > -1) {
+                const req = new XMLHttpRequest()
+                req.open("POST", "https://discord.com/api/oauth2/authorize")
+                req.send(code)
+                req.onload = () => {
+                    
+                    document.getElementById("display_result").innerText = `${username}`
+                }
+
+			}
 		}
-
-		fetch('https://discord.com/api/users/@me', {
-			headers: {
-				authorization: `${tokenType} ${accessToken}`,
-			},
-		})
-			.then(result => result.json())
-			.then(response => {
-				const { username, discriminator } = response;
-				document.getElementById('display_result').innerText += ` ${username}`;
-			})
-			.catch(console.error);
-	};
       </script>
       <div class="topnav" id="myHeader">
         <a href="#"><img src="//cdn.discordapp.com/avatars/841830580609351700/2ebc9ba3abe80e45dc7bb11ebe9e5e68.png">
@@ -122,7 +116,7 @@ body {
     text-decoration: none;"><h2>Commands</h2></a><a href="/server.html" style="    color: white;
     text-decoration: none;"><h2>Support Server</h2></a><a href="/invite.html" style="    color: white;
     text-decoration: none;"><h2>Invite Bot</h2></a>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=841830580609351700&redirect_uri=https%3A%2F%2Fmoderator-bot.github.io&response_type=code&scope=identify" id="login"><h2>Login</h2></a>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=841830580609351700&redirect_uri=https%3A%2F%2Fmoderator-bot.github.io&response_type=code&scope=identify"><h2>Login</h2></a>
         <div id="display_result"></div>
 </div>
       <center>
