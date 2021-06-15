@@ -106,37 +106,68 @@ body {
   padding-top: 102px;
 }
       </style>
-	<div class="topnav" id="myHeader">
-        <h1 style="cursor: pointer;">Moderator</h1><a href="/commands.html" style="    color: white;
+      <div class="topnav" id="myHeader">
+        <a href="#"><img src="//cdn.discordapp.com/avatars/841830580609351700/2ebc9ba3abe80e45dc7bb11ebe9e5e68.png">
+    </a><a href="/commands.html" style="    color: white;
     text-decoration: none;"><h2>Commands</h2></a><a href="/server.html" style="    color: white;
-    text-decoration: none;"><h2>Support Server</h2></a>
-		<a href="/invite.html" style="    color: white;
+    text-decoration: none;"><h2>Support Server</h2></a><a href="/invite.html" style="    color: white;
     text-decoration: none;"><h2>Invite Bot</h2></a>
-		
+        <a href="https://discord.com/api/oauth2/authorize?client_id=841830580609351700&redirect_uri=https%3A%2F%2Fmoderator-bot.github.io&response_type=code&scope=identify"><h2>Login</h2></a>
+        <div id="display_result"></div>
 </div>
 </head>
 <body>
-<center>
-      <span style="color: white;">Prefix:</span>
-        <code style="color: red; background-color: grey;">server!</code>
-        <br>
-        <span style="color: white;">Commands:</span>
-        <br>
-        <code style="color: red; background-color: grey;">server!banuser @Wumpus rudeness to others</code>
-        <br>
-        <code style="color: red; background-color: grey;">server!kickuser @Wumpus spam</code>
-        <br>
-        <code style="color: red; background-color: grey;">server!dmuser @Wumpus hello!</code>
-        <br>
-        <code style="color: red; background-color: grey;">server!setupbot</code>
-        <br>
-        <code style="color: red; background-color: grey;">server!purge 6</code>
-        <br>
-        <code style="color: red; background-color: grey;">server!muteuser @Wumpus</code>
-        <br>
-        <code style="color: red; background-color: grey; ">server!unmuteuser @Wumpus</code>
-        <br>
-        </center>
-  
+<div class="usage-summary-card card" style="
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    border: 0;
+    background-color: #fff;
+    padding: 40px;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Noto Sans&quot;,&quot;Liberation Sans&quot;,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,&quot;Noto Color Emoji&quot;;
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+    background-color: black
+"><center><h1>Commands</h1><br>
+<h2 style="float: left;">Command</h2><h2>Description</h2><br><h3 style="float: left;">server!developer</h3><h3>This can be used by anyone, To test the bot if it is working</h3><br><h3 style="float: left;">server!ban [User] [Reason]</h3><h3>To ban a person from your server</h3><br><h3 style="float: left;">server!dm [Message]</h3><h3>This can be used by anyone, To dm someone (Note: Your username will be sent along with the dm)</h3><br><h3 style="float: left;">server!kick</h3><h3>To kick a person</h3><br><h3 style="float: left;">server!meeting</h3><h3>This can be used by anyone, To create a meeting that will be automatically deleted after one hour</h3><br><h3 style="float: left;">server!joke</h3><h3>This can be used by anyone, To tell a joke</h3><br><h3 style="float: left;">server!hangup</h3><h3>This can be used by anyone, To end the meet</h3><br><h3 style="float: left;">server!purge [Amount]</h3><h3>To clear the amount of messages you provided</h3><br><h3 style="float: left;">server!warn [Message]</h3><h3>To warn someone</h3><br><h3 style="float: left;">server!ping</h3><h3>To get the ping of the bot</h3><br><h3 style="float: left;">server!status</h3><h3>To get the statuspage of the bot</h3><br></center></div>
 </body>
 </html>
