@@ -146,6 +146,23 @@ function openWin() {
         <br>
         <img src="/favicon.png" style="width: 128px; height: 128px;">
         <br>
+	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.fadein').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1'},1000);
+            }
+            
+        }); 
+    });
+});
+	      </script>
         <a href="javascript:void(0)">
 <button style="white-space: nowrap;
     user-select: none;
