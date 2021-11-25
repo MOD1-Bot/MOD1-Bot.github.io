@@ -198,7 +198,7 @@ function openWin() {
 $(window).on("load",function() {
   $(window).scroll(function() {
     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".hideme").each(function() {
+    $(".fade").each(function() {
       /* Check the location of each desired element */
       var objectBottom = $(this).offset().top + $(this).outerHeight();
       
@@ -344,7 +344,7 @@ $(window).on("load",function() {
 <img src="/sewearing.png" style="
     width: auto;
     height: auto;
-" class="top">    <div class="hideme">			      <h1>Warn people!</h1>
+" class="top">    <div class="fade">			      <h1>Warn people!</h1>
 		  <div id="image-wrapper">
 <img src="/warn.png" style="
     width: auto;
