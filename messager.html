@@ -1,0 +1,17 @@
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-discord-message"></script>
+
+<script>
+Vue.use(VueDiscordMessage);
+</script>
+<discord-messages>
+	<discord-message>
+		Hey guys, I'm new here! Glad to be able to join you all!
+	</discord-message>
+	<discord-message author="Dawn" avatar="red">
+		Hi, I'm new here too!
+	</discord-message>
+	<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
+		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
+	</discord-message>
+</discord-messages>
