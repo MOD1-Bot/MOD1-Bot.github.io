@@ -1,6 +1,63 @@
-<h1>ur offline</h1>
-  <canvas id="game" width="640" height="480"></canvas>
-<script>
+<!DOCTYPE HTML>
+<html>
+	<head><title>Offline - MOD1</title></head>
+	<body>
+	<center>
+<h1 style="color: white;">An Error Occurred</h1>
+<img src="/rejected.png">
+<h2 style="color: white;">You are currently offline! Try playing our table tennis game to pass the time :)</h2>
+		  <canvas id="game" width="640" height="480"></canvas>
+
+        	    	    <script>
+var myWindow;
+
+function openWin() {
+  myWindow = window.open("/invite", "myWindow", "width=500,height=500");
+}
+</script>
+  <a class="btn-primary-md btn-min-width" title="Go to the Previous Page" onclick="history.back();return false;" style="color: #f2f4f5; margin-right: 12px; background-color: #393b3d;
+    border-color: #393b3d;
+    color: #f2f4f5;
+    border-radius: 8px;     font-weight: 500;     text-decoration: none;     min-width: 90px; -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(52, 56, 70);
+    border: 1px solid: rgb(52, 56, 70);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    height: auto;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 9px;
+    font-size: 16px;
+    line-height: 100%;
+    border-radius: 3px;" href="#">Go Back</a>
+    <a class="btn-primary-md btn-min-width" title="Refresh Page" onclick="window.location.refresh()" style="color: #f2f4f5; margin-right: 12px; background-color: #393b3d;
+    border-color: #393b3d;
+    color: #f2f4f5;
+    border-radius: 8px;     font-weight: 500;     text-decoration: none;     min-width: 90px; -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(52, 56, 70);
+    border: 1px solid: rgb(52, 56, 70);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    height: auto;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 9px;
+    font-size: 16px;
+    line-height: 100%;
+    border-radius: 3px;" href="javascript:void(0)">Refresh Page</a>
+    </center><script>
 	var canvas = document.getElementById("game");
     var ctx = canvas.getContext("2d");
     function paddle(x, y, width, height) {
@@ -155,3 +212,5 @@
       checkNetworkAndReload();
 
 </script>
+	</body>
+</html>
