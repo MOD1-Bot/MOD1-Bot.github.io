@@ -1,1 +1,2 @@
 ErrorDocument 500 /500.html
+Redirect 301 /index.html /christmas.html
