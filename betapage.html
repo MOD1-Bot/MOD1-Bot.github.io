@@ -147,14 +147,70 @@ function openWin() {
 			}
 		}
       </script>
-      <div class="topnav" id="myHeader">
-        <a href="#"><img src="/favicon.png" style="width: 128px; height: 128px;">
-    </a><a href="/commands.html" style="    color: white;
-    text-decoration: none;"><h2>Commands</h2></a><a href="/server.html" style="    color: white;
-    text-decoration: none;"><h2>Support Server</h2></a><a href="javascript:void(0)" style="    color: white;
-    text-decoration: none;" onclick="openWin()"><h2>Invite Bot</h2></a>
-	      
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+}
+
+
+  .topnav.responsive a {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+<div class="topnav" id="myTopnav">
+  <a href="/" class="active" style="float:left;"><img src="https://mod1.cf/transparent.png" width=50></a>
+<a href="/commands" style="float:left;"><span>Commands</span></a>
+<a href="/server" style="float:left;"><span>Support Server</span></a>
+
+<a href="javascript:void(0)" style="float:left;" onclick="openWin()"><span>Invite Bot</span></a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"  style="float:right;">
+  
+  
+  
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
+	    <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 	    
 	    <noscript>
 <div class="alert">
