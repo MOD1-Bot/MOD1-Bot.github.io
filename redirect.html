@@ -1,0 +1,32 @@
+<script>This is definitely more of an Oauth2 question than a Discord question. This answer will use JS examples using the node-fetch library to make web requests, and assumes you're using an express backend.
+
+First you want to have the user authorize their account with your client ID and the identify scope. When they click authorize, they'll be sent to your specified redirect URI (https://example.com/redirect for this example).
+
+When they're redirected, there will be a code GET parameter on the URL they land on, which you should take and send to Discord's token URL to get an access token:
+
+app.get('/redirect', async function (req, res) {
+    // Check their GET params to get the code
+    var code = req.query.code;
+
+    // Make our POST body
+    var body = {
+        'client_id': CLIENT_ID,
+        'client_secret': CLIENT_SECRET,
+        'grant_type': 'authorization_code',
+        'code': code,
+        'redirect_uri': 'https://example.com/redirect',
+    };
+
+    // POST that to Discord
+    var site = await fetch("https://discord.com/api/v9/oauth2/token", {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    });
+
+    // And parse the response
+    var response = await site.json();
+    var accessToken = response['access_token'];
+    res.send(`Access token: ${accessToken}`);
+})
+</script>
