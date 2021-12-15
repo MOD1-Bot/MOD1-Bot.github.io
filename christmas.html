@@ -10,6 +10,28 @@
 });
 	    </script>
 	    <script>
+	window.onload = () => {
+		const fragment = new URLSearchParams(window.location.hash.slice(1));
+		const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+
+		if (!accessToken) {
+			return document.getElementById('login').style.display = 'block';
+		}
+
+		fetch('https://discord.com/api/users/@me', {
+			headers: {
+				authorization: `${tokenType} ${accessToken}`,
+			},
+		})
+			.then(result => result.json())
+			.then(response => {
+				const { username, discriminator } = response;
+				document.getElementById('info').innerText += ` ${username}#${discriminator}`;
+			})
+			.catch(console.error);
+	};
+</script>
+	    <script>
 /*
 Copyright 2015, 2019, 2020, 2021 Google LLC. All Rights Reserved.
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -241,7 +263,8 @@ function openWin() {
     </a><a href="/commands.html" style="    color: white;
     text-decoration: none;"><h2>Commands</h2></a><a href="/server.html" style="    color: white;
     text-decoration: none;"><h2>Support Server</h2></a><a href="javascript:void(0)" style="    color: white;
-    text-decoration: none;" onclick="openWin()"><h2>Invite Bot</h2></a>
+    text-decoration: none;" onclick="openWin()"><h2>Invite Bot</h2></a><a href="https://discord.com/api/oauth2/authorize?client_id=841830580609351700&redirect_uri=http%3A%2F%2Flocalhost%3A53134&response_type=code&scope=identify" style="    color: white;
+    text-decoration: none;" onclick="openWin()"><h2>Login</h2></a>
 	      
 </div>
 	    
