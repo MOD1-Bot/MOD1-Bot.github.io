@@ -3,114 +3,13 @@
     <head>
 	    <title>MOD1</title>
 	    <script>
-		    window.addEventListener('load', () => {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js');
-  }
-});
+function _0x8a24(){var _0x65d2a2=['register','92QKftcn','37996101cjiGVW','serviceWorker','790731JKbjoS','717Nbcjdf','6523088ZCfadF','1326JlFWrY','7mCOCBH','10UWxvzq','5925nFtbXE','service-worker.js','1470671zovMUZ','1804026MCBThZ','load'];_0x8a24=function(){return _0x65d2a2;};return _0x8a24();}function _0x544e(_0x1bbae8,_0x1ebebf){var _0x8a245=_0x8a24();return _0x544e=function(_0x544ec5,_0x50bab2){_0x544ec5=_0x544ec5-0x149;var _0x29f576=_0x8a245[_0x544ec5];return _0x29f576;},_0x544e(_0x1bbae8,_0x1ebebf);}var _0x547582=_0x544e;(function(_0x306a10,_0x51c2c6){var _0xfe4c52=_0x544e,_0x5e6e32=_0x306a10();while(!![]){try{var _0xbee391=-parseInt(_0xfe4c52(0x14f))/0x1+-parseInt(_0xfe4c52(0x14a))/0x2*(parseInt(_0xfe4c52(0x157))/0x3)+-parseInt(_0xfe4c52(0x153))/0x4*(parseInt(_0xfe4c52(0x14d))/0x5)+-parseInt(_0xfe4c52(0x150))/0x6*(parseInt(_0xfe4c52(0x14b))/0x7)+-parseInt(_0xfe4c52(0x149))/0x8+-parseInt(_0xfe4c52(0x156))/0x9*(-parseInt(_0xfe4c52(0x14c))/0xa)+parseInt(_0xfe4c52(0x154))/0xb;if(_0xbee391===_0x51c2c6)break;else _0x5e6e32['push'](_0x5e6e32['shift']());}catch(_0x38ca19){_0x5e6e32['push'](_0x5e6e32['shift']());}}}(_0x8a24,0xbbe4a),window['addEventListener'](_0x547582(0x151),()=>{var _0x34b9b5=_0x547582;_0x34b9b5(0x155)in navigator&&navigator[_0x34b9b5(0x155)][_0x34b9b5(0x152)](_0x34b9b5(0x14e));}));
 	    </script>
 	    <script>
-	window.onload = () => {
-		const fragment = new URLSearchParams(window.location.hash.slice(1));
-		const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
-
-		if (!accessToken) {
-			return document.getElementById('login').style.display = 'block';
-		}
-
-		fetch('https://discord.com/api/users/@me', {
-			headers: {
-				authorization: `${tokenType} ${accessToken}`,
-			},
-		})
-			.then(result => result.json())
-			.then(response => {
-				const { username, discriminator } = response;
-				document.getElementById('info').innerText += ` ${username}#${discriminator}`;
-			})
-			.catch(console.error);
-	};
+function _0x3d85(_0x272eff,_0x141b58){const _0x2e9af9=_0x2e9a();return _0x3d85=function(_0x3d85d1,_0x459616){_0x3d85d1=_0x3d85d1-0xb4;let _0x4dedde=_0x2e9af9[_0x3d85d1];return _0x4dedde;},_0x3d85(_0x272eff,_0x141b58);}function _0x2e9a(){const _0x9741c8=['match','mode','5505417iYnyUu','1881900oUNNba','reload','addEventListener','respondWith','waitUntil','open','7FRVvlt','517599HNVFZY','fetch','navigationPreload','activate','registration','offline','7864aFTQGI','clients','navigate','skipWaiting','preloadResponse','log','1117476Bnnjml','795555iBsueJ','1133576dWJhOb','Fetch\x20failed;\x20returning\x20offline\x20page\x20instead.','4qqHJaN'];_0x2e9a=function(){return _0x9741c8;};return _0x2e9a();}const _0x386377=_0x3d85;(function(_0x3c1a81,_0x161994){const _0x322bd4=_0x3d85,_0x350842=_0x3c1a81();while(!![]){try{const _0x21099a=-parseInt(_0x322bd4(0xba))/0x1*(-parseInt(_0x322bd4(0xc4))/0x2)+parseInt(_0x322bd4(0xb4))/0x3+-parseInt(_0x322bd4(0xc0))/0x4+parseInt(_0x322bd4(0xc1))/0x5+-parseInt(_0x322bd4(0xc8))/0x6+-parseInt(_0x322bd4(0xce))/0x7*(parseInt(_0x322bd4(0xc2))/0x8)+parseInt(_0x322bd4(0xc7))/0x9;if(_0x21099a===_0x161994)break;else _0x350842['push'](_0x350842['shift']());}catch(_0x126626){_0x350842['push'](_0x350842['shift']());}}}(_0x2e9a,0x36c71));const OFFLINE_VERSION=0x1,CACHE_NAME=_0x386377(0xb9),OFFLINE_URL='offline.html';self[_0x386377(0xca)]('install',_0x275aaa=>{const _0x147293=_0x386377;_0x275aaa[_0x147293(0xcc)](((async()=>{const _0x5c387a=_0x147293,_0x5169e9=await caches[_0x5c387a(0xcd)](CACHE_NAME);await _0x5169e9['add'](new Request(OFFLINE_URL,{'cache':_0x5c387a(0xc9)}));})())),self[_0x147293(0xbd)]();}),self['addEventListener'](_0x386377(0xb7),_0x2764b0=>{const _0x49b98b=_0x386377;_0x2764b0[_0x49b98b(0xcc)](((async()=>{const _0x49a95e=_0x49b98b;_0x49a95e(0xb6)in self['registration']&&await self[_0x49a95e(0xb8)][_0x49a95e(0xb6)]['enable']();})())),self[_0x49b98b(0xbb)]['claim']();}),self['addEventListener'](_0x386377(0xb5),_0x985524=>{const _0x420b31=_0x386377;_0x985524['request'][_0x420b31(0xc6)]===_0x420b31(0xbc)&&_0x985524[_0x420b31(0xcb)](((async()=>{const _0x3beb30=_0x420b31;try{const _0x249dea=await _0x985524[_0x3beb30(0xbe)];if(_0x249dea)return _0x249dea;const _0x3f4398=await fetch(_0x985524['request']);return _0x3f4398;}catch(_0x2c539a){console[_0x3beb30(0xbf)](_0x3beb30(0xc3),_0x2c539a);const _0xd12ad0=await caches['open'](CACHE_NAME),_0x553860=await _0xd12ad0[_0x3beb30(0xc5)](OFFLINE_URL);return _0x553860;}})()));});
 </script>
 	    <script>
-/*
-Copyright 2015, 2019, 2020, 2021 Google LLC. All Rights Reserved.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-*/
-
-// Incrementing OFFLINE_VERSION will kick off the install event and force
-// previously cached resources to be updated from the network.
-const OFFLINE_VERSION = 1;
-const CACHE_NAME = 'offline';
-// Customize this with a different URL if needed.
-const OFFLINE_URL = 'offline.html';
-
-self.addEventListener('install', (event) => {
-  event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    // Setting {cache: 'reload'} in the new request will ensure that the response
-    // isn't fulfilled from the HTTP cache; i.e., it will be from the network.
-    await cache.add(new Request(OFFLINE_URL, {cache: 'reload'}));
-  })());
-  // Force the waiting service worker to become the active service worker.
-  self.skipWaiting();
-});
-
-self.addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    // Enable navigation preload if it's supported.
-    // See https://developers.google.com/web/updates/2017/02/navigation-preload
-    if ('navigationPreload' in self.registration) {
-      await self.registration.navigationPreload.enable();
-    }
-  })());
-
-  // Tell the active service worker to take control of the page immediately.
-  self.clients.claim();
-});
-
-self.addEventListener('fetch', (event) => {
-  // We only want to call event.respondWith() if this is a navigation request
-  // for an HTML page.
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        // First, try to use the navigation preload response if it's supported.
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
-        }
-
-        // Always try the network first.
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
-      } catch (error) {
-        // catch is only triggered if an exception is thrown, which is likely
-        // due to a network error.
-        // If fetch() returns a valid HTTP response with a response code in
-        // the 4xx or 5xx range, the catch() will NOT be called.
-        console.log('Fetch failed; returning offline page instead.', error);
-
-        const cache = await caches.open(CACHE_NAME);
-        const cachedResponse = await cache.match(OFFLINE_URL);
-        return cachedResponse;
-      }
-    })());
-  }
-
-  // If our if() condition is false, then this fetch handler won't intercept the
-  // request. If there are any other fetch handlers registered, they will get a
-  // chance to call event.respondWith(). If no fetch handlers call
-  // event.respondWith(), the request will be handled by the browser as if there
-  // were no service worker involvement.
-});
+const _0x43e1e1=_0x3196;function _0xcdcd(){const _0x44e63d=['addEventListener','329679wvgvGZ','9093YDqpOg','offline.html','2hFtZie','request','navigate','enable','11MvBGfY','open','1812ixuHog','1964345GVSkth','238489AYzosU','mode','navigationPreload','offline','install','Fetch\x20failed;\x20returning\x20offline\x20page\x20instead.','1725070LLUtnu','fetch','add','6515040tFBfcG','registration','9nMYeif','4ZzELvv','match','activate','clients','2203616lluCwd','claim'];_0xcdcd=function(){return _0x44e63d;};return _0xcdcd();}function _0x3196(_0x55ee8d,_0x3b46f3){const _0xcdcd09=_0xcdcd();return _0x3196=function(_0x319639,_0x4564f5){_0x319639=_0x319639-0x16d;let _0x2aa451=_0xcdcd09[_0x319639];return _0x2aa451;},_0x3196(_0x55ee8d,_0x3b46f3);}(function(_0x228abd,_0x1da334){const _0x45efb5=_0x3196,_0x4f8e7a=_0x228abd();while(!![]){try{const _0x2ad18b=-parseInt(_0x45efb5(0x16d))/0x1*(-parseInt(_0x45efb5(0x183))/0x2)+parseInt(_0x45efb5(0x180))/0x3*(parseInt(_0x45efb5(0x179))/0x4)+-parseInt(_0x45efb5(0x18a))/0x5+parseInt(_0x45efb5(0x189))/0x6*(-parseInt(_0x45efb5(0x181))/0x7)+parseInt(_0x45efb5(0x17d))/0x8*(parseInt(_0x45efb5(0x178))/0x9)+-parseInt(_0x45efb5(0x173))/0xa*(parseInt(_0x45efb5(0x187))/0xb)+parseInt(_0x45efb5(0x176))/0xc;if(_0x2ad18b===_0x1da334)break;else _0x4f8e7a['push'](_0x4f8e7a['shift']());}catch(_0x5456dc){_0x4f8e7a['push'](_0x4f8e7a['shift']());}}}(_0xcdcd,0x330b8));const OFFLINE_VERSION=0x1,CACHE_NAME=_0x43e1e1(0x170),OFFLINE_URL=_0x43e1e1(0x182);self[_0x43e1e1(0x17f)](_0x43e1e1(0x171),_0x1a2864=>{_0x1a2864['waitUntil'](((async()=>{const _0x315703=_0x3196,_0x163768=await caches[_0x315703(0x188)](CACHE_NAME);await _0x163768[_0x315703(0x175)](new Request(OFFLINE_URL,{'cache':'reload'}));})())),self['skipWaiting']();}),self[_0x43e1e1(0x17f)](_0x43e1e1(0x17b),_0x180b15=>{const _0x21ef6f=_0x43e1e1;_0x180b15['waitUntil'](((async()=>{const _0x536b05=_0x3196;_0x536b05(0x16f)in self[_0x536b05(0x177)]&&await self[_0x536b05(0x177)][_0x536b05(0x16f)][_0x536b05(0x186)]();})())),self[_0x21ef6f(0x17c)][_0x21ef6f(0x17e)]();}),self['addEventListener'](_0x43e1e1(0x174),_0x4881c3=>{const _0x28e348=_0x43e1e1;_0x4881c3[_0x28e348(0x184)][_0x28e348(0x16e)]===_0x28e348(0x185)&&_0x4881c3['respondWith'](((async()=>{const _0x1bdbff=_0x28e348;try{const _0x133ca7=await _0x4881c3['preloadResponse'];if(_0x133ca7)return _0x133ca7;const _0x514ed9=await fetch(_0x4881c3[_0x1bdbff(0x184)]);return _0x514ed9;}catch(_0x3c839f){console['log'](_0x1bdbff(0x172),_0x3c839f);const _0x5e54d6=await caches[_0x1bdbff(0x188)](CACHE_NAME),_0xcb495d=await _0x5e54d6[_0x1bdbff(0x17a)](OFFLINE_URL);return _0xcb495d;}})()));});
 
 	    </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
