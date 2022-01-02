@@ -2,74 +2,40 @@
   <html style="background-color: rgb(52, 56, 60); font-family: Open Sans;">
     <head>
 	    <title>MOD1</title>
-	    <style>
-		    
+	    	    <style>
 
-@mixin rings($duration, $delay) {
-    opacity: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: 0;
-    bottom: 0;
-    content: '';
-    height: 100%;
-    width: 100%;
-    border: 8px solid rgba(0,0,0,0.2);
-    border-radius: 100%;
-    animation-name: ripple;
-    animation-duration: $duration;
-    animation-delay: $delay;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.65,0,.34,1);
-    z-index: -1;
+ .invite {
+	 background: transparent;
+	 cursor: pointer;
+	 border: 2px solid white;
+	 color: white;
+	 text-align: center;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 border-radius: 100%;
+	 text-transform: uppercase;
+	 font-family: 'Muli-LightItalic', Helvetica;
+	 font-size: 20px;
+	 line-height: 30px;
+	 animation: ripple 1.5s linear infinite;
+	 transition: all 0.7s ease;
 }
-
-.request-loader {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 150px;
-  border-radius: 100%;
-  background: #FFFFFF;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.25);
-  
-  span {
-    position: relative;
-    font-size: 72px;
-    top: 5px;
-    left: -5px;
-  }
-  
-  &::after {
-    @include rings(3s, 0s);
-  }
-  
-  &::before {
-    @include rings(3s, 0.5s);
-  }
+ .invite:hover {
+	 transform: scale(1.1);
 }
-
-
-@keyframes ripple {
-  from {
-    opacity: 1;
-    transform: scale3d(0.75,0.75,1);
-  }
-  
-  to {
-    opacity: 0;
-    transform: scale3d(1.5,1.5,1);
-  }
+ .invite:focus {
+	 outline: none;
 }
-
+ @keyframes ripple {
+	 0% {
+		 box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 0 3px rgba(255, 255, 255, 0.3), 0 0 0 5px rgba(255, 255, 255, 0.3);
+	}
+	 100% {
+		 box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
+	}
+}
+ 
 
 	    </style>
 	    <script>
@@ -411,7 +377,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     cursor: pointer;
     min-height: 32px;
     min-width: 60px;
-    width: unset;"><center><img src="/swag B).svg" alt="Discord" style="white-space: nowrap;
+    width: unset;" class="invite"><center><img src="/swag B).svg" alt="Discord" style="white-space: nowrap;
     user-select: none;
     line-height: 1;
     font-weight: 400;
