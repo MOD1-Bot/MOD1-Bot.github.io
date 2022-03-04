@@ -5,7 +5,7 @@
 }
 
 @font-face {
-	font-family: raleway xbold;
+	font-family: raleway bold;
 	src: url(fonts/Raleway-ExtraBold.ttf);
 	font-feature-settings: 'pnum' on, 'lnum' on
 }
