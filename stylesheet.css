@@ -5,7 +5,7 @@
 }
 
 @font-face {
-	font-family: raleway xbold;
+	font-family: raleway bold;
 	src: url(fonts/Raleway-ExtraBold.ttf);
 	font-feature-settings: 'pnum' on, 'lnum' on
 }
@@ -79,7 +79,7 @@ body {
 }
 
 .LogoIcon {
-	background: url(images/logowname.png);
+	background: url(images/logo.png);
 	background-repeat: no-repeat;
 	display: block;
 	width: 50px;
