@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="theater">
+  <video id="video" src="https://du.sf-converter.com/go?payload=1*eJzVVNmOozgU%2FZWopLZmpCGFbbaUhFokqUqRpJJKKvsLYjHEFcDshBrNv48hPb089mgeeiQ43rj3%2Bhz78OddzsrMJdssvHu4OxdFkj%2Fc39d13W9YWZQO6bssuq%2Ftwj1%2FrnRvVUv1YB8c3NXdH18iTe%2BnA%2B3So%2BzHilkGBUHIY0EOGCGxmvUDxoKQVNQjrEvV9ZLQbhzbvXwm14RmRIeKpCgDTcYKIFS%2Finl0TGZkydC8WR3GaVpKYwPQRJeUPuIv7iOEAfV0JhhPjRY%2B7a6bg4GCK3IWu8cdtKf0IFiv28ZbmpPZbDeMJ5U7sQEt7ECHkghulPUvFEFG0pJvI89DvSE5iM666oIo0jH8hEZoAKJY%2F44Sn7uN1CYOPRDlul3yucwrQVTpEQeqQ5CEOlIBjWnh1rHnJLkOoSyLogiqJKv4BxGNiN5J%2BAk9RYkE4lxfhPVcmBU5FNfO%2FLj13cEMw%2BI4AQHNuq25IYl1LGEsQwl4ZaYjiPriAIIwKloVuYxIlVQRq5qCwG1OUVRFVTXgV1xBCC6EJHZIK9Il9PkJ6EgSRYhV3LLlXZVrDFx9%2FzgEBV%2BVZIwkzPen54MrMa2CjZ5KDa9AntiZzenfDpEHE8qBJi14LXC5W7E6sVuFvsrMB60KvGlV4E2cc%2BAkObYUecPJceS0QPhPnejcBkQttF9EbUzUJanawkmb9jvBeSANdGOCR9bVqNeGGSwqNZc14TFdwrPbuEO0XLLN8W1zcoJNVaUkc1aFxtICvV9G5vN24XswDb3o6cwG%2B9qwxgjCZLLwzdnyJLOhvJgoiTAbjl5BV2iZiqup1hVa7RoVx%2FZFSQZvcvoczk1xMZyxyWZuRop2yHO%2BJ8k6VOJHPjLHB6q9sIMxt6Ln17dTMbam%2B%2ByFMtFUis0pXA8DbZJmJSw%2F9tx0nX%2F%2Bf6bjRey2x22A23sGsdSh3KHSodqiIna3EHV4u5FSh%2B0qUjWOeCB1KHeodKh2eFsd%2FDr%2B7oT%2FWX9DFatdpq8G57%2BsbwaXNCirsoI4z%2F%2FM4PK%2FMvjtRH8di6%2FMwJkTH9GptFeF8xaruykhry7yrSqv%2FP069YeHxcms3pX5uzQyV6Nj6JTJlVqpPRdwojiKl8pPyB7VBC2O%2FrZWrKGjWRjSmfEJj%2Fnzo9VX5tl4eU%2FUXXJasxPWwp0ymhbCJZiOm%2Bv6%2BSRdBsfDyti%2FzNXGuDgGNT6iD3fOxm%2BXrfF6LU4nEbLjzG7XnNo6MVyNd%2BHHWZiN3upbQW75ghYh4X5fU%2FfSM3I%2BaHpCb0EqkvUmLI7t3oSfdu%2FIyt426f229H3qUjvsvZQ5dXu79gr%2BztPcTjE3iruHb9b%2F629L853I*1646676991*f8a83e5a558fc601" controls="false" style="display: none;" autoplay=true></video>
+  <canvas id="canvas"></canvas>
+  <label>
+    <br />Try to play me :)</label>
+  <br />
+</div>
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var video = document.getElementById('video');
+
+// set canvas size = video size when known
+video.addEventListener('loadedmetadata', function() {
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+});
+
+video.addEventListener('play', function() {
+  var $this = this; //cache
+  (function loop() {
+    if (!$this.paused && !$this.ended) {
+      ctx.drawImage($this, 0, 0);
+      setTimeout(loop, 1000 / 30); // drawing at 30fps
+    }
+  })();
+}, 0);
+    </script>
+</body>
+</html>
