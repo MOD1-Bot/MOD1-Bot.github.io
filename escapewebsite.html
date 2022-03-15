@@ -1,0 +1,57 @@
+<div class="links">
+  <a href="https://www.html5andbeyond.com" class="external-link">External Link 1</a>
+  <a href="http://www.imgperfect.com/" class="external-link">External Link 2</a>
+</div>
+<style>
+  body {
+background-color: #333;
+text-align: center;
+}
+
+.links {
+padding: 1em 1em 0.5em;
+display: inline-block;
+background-color: #f96e5b;
+margin: 30px 0 0;
+border-radius: 20px;
+}
+
+a {
+text-decoration: none;
+font-family: helvetica;
+font-weight: bold;
+color: #fff;
+padding: 5px;
+margin: 0 0 10px;
+display: block;
+font-size: 2em;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+  jQuery(document).ready(function($){
+
+$('.external-link').on('click',function(){
+
+var getLink = $(this).attr('href');
+
+swal({
+  icon: 'info',
+  title: 'You&#39;re Leaving This Site!',
+  text: 'This is a link to an external site. Click OK to continue to the content (' + getLink + ').',
+  html: true,
+  confirmButtonColor: '#2ecc71',
+  showCancelButton: true,
+},function(){
+
+window.open(getLink,'_blank')
+
+});
+
+return false;
+
+});
+
+});
+</script>
